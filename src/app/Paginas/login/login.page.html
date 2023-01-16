@@ -1,0 +1,79 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+<form [formGroup]="formulario">
+  <h1 style ="margin-left: 50px;"> Skeleton App</h1>
+  <h6 style ="margin-left: 50px;"> Aqui comienza todo</h6>
+  <ion-row>
+
+
+
+
+    <br>
+    <br>
+
+  </ion-row>
+  <h1 style ="margin-left: 60px;"> Bienvenido</h1>
+<ion-row>
+  <ion-col col-4>
+  <ion-card >
+    <ion-card-content>
+    <ion-list>
+
+      <ion-item counter="true">
+        <ion-label position="floating">Usuario</ion-label>
+
+        <ion-input type="text" formControlName="usuario" placeholder="Ingresa Usuario"  ></ion-input>
+        <ion-note slot="error"
+        *ngIf="campo('usuario').invalid  && campo('usuario').errors && campo('usuario').errors.required && campo3('usuario') ">
+        Este campo es requerido
+      </ion-note>
+      <ion-note slot="error"
+        *ngIf="campo('usuario').invalid  && campo('usuario').errors && campo('usuario').errors.maxlength && campo2('usuario') ">
+        Los caracteres maximos son 8
+      </ion-note>
+      <ion-note slot="error"
+        *ngIf="campo('usuario').invalid  && campo('usuario').errors && campo('usuario').errors.minlength && campo('usuario') ">
+        Los caracteres minimo son 3
+      </ion-note>
+      </ion-item>
+
+      <ion-item counter="true">
+        <ion-label position="floating">Contraseña</ion-label>
+        <ion-input type="password" formControlName="contraseña" placeholder="Ingresa Contraseña"></ion-input>
+        <ion-note slot="error"
+        *ngIf="campo('contraseña').invalid  && campo('contraseña').errors && campo('contraseña').errors.required && campo3('contraseña') ">
+        Este campo es requerido
+      </ion-note>
+      <ion-note slot="error"
+        *ngIf="campo('contraseña').invalid  && campo('contraseña').errors && campo('contraseña').errors.maxlength && campo2('contraseña') ">
+        Los caracteres maximos son 4
+      </ion-note>
+      <ion-note slot="error"
+        *ngIf="campo('contraseña').invalid  && campo('contraseña').errors && campo('contraseña').errors.minlength && campo('contraseña') ">
+        Los caracteres minimo son 4
+      </ion-note>
+
+
+
+
+      </ion-item>
+
+
+    </ion-list>
+    </ion-card-content>
+    </ion-card>
+    <ion-button style ="margin-left: 64px;"shape="round" [routerLink]="['home']">Ingresar</ion-button>
+
+  </ion-col>
+  </ion-row>
+  <br>
+      <a style ="margin-left:85px;"> Crear Cuenta </a>
+
+</form>
+</ion-content>
