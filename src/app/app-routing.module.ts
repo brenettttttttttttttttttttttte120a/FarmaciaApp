@@ -16,7 +16,7 @@ const routes: Routes = [
     loadChildren: () => import('./Paginas/inicio/inicio.module').then( m => m.InicioPageModule)
   },
   {
-    path: 'producto',
+    path: '',
     loadChildren: () => import('./Paginas/producto/producto.module').then( m => m.ProductoPageModule)
   },
 
@@ -41,7 +41,7 @@ const routes: Routes = [
     loadChildren: () => import('./Paginas/medio-pago/medio-pago.module').then( m => m.MedioPagoPageModule)
   },
   {
-    path: '',
+    path: 'carrito',
     loadChildren: () => import('./Paginas/carrito/carrito.module').then( m => m.CarritoPageModule)
   },
 ];
