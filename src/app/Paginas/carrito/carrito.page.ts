@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ModalController } from '@ionic/angular';
 
 @Component({
   selector: 'app-carrito',
@@ -6,6 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./carrito.page.scss'],
 })
 export class CarritoPage implements OnInit {
+  modalCtrl: any;
+  close() {
+    this.modalCtrl.dismiss();
+  }
+
 
   constructor() { }
 
