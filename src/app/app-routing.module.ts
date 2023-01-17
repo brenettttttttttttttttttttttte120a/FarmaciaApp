@@ -12,7 +12,7 @@ const routes: Routes = [
     loadChildren: () => import('./Paginas/registro/registro.module').then( m => m.RegistroPageModule)
   },
   {
-    path: '',
+    path: 'inicio',
     loadChildren: () => import('./Paginas/inicio/inicio.module').then( m => m.InicioPageModule)
   },
   {
@@ -41,7 +41,7 @@ const routes: Routes = [
     loadChildren: () => import('./Paginas/medio-pago/medio-pago.module').then( m => m.MedioPagoPageModule)
   },
   {
-    path: 'carrito',
+    path: '',
     loadChildren: () => import('./Paginas/carrito/carrito.module').then( m => m.CarritoPageModule)
   },
 ];
