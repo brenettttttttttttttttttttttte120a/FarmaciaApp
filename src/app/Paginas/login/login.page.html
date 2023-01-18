@@ -6,74 +6,62 @@
 
 
 <ion-content>
-<form [formGroup]="formulario">
-  <h1 style ="margin-left: 50px;"> Skeleton App</h1>
-  <h6 style ="margin-left: 50px;"> Aqui comienza todo</h6>
-  <ion-row>
-
-
-
-
-    <br>
-    <br>
-
-  </ion-row>
-  <h1 style ="margin-left: 60px;"> Bienvenido</h1>
-<ion-row>
-  <ion-col col-4>
-  <ion-card >
+  <ion-card style="text-align:center">
+    <ion-card-header>
+      <ion-card-title color="dark">Login</ion-card-title>
+    </ion-card-header>
     <ion-card-content>
-    <ion-list>
-
-      <ion-item counter="true">
-        <ion-label position="floating">Usuario</ion-label>
-
-        <ion-input type="text" formControlName="usuario" placeholder="Ingresa Usuario"  ></ion-input>
-        <ion-note slot="error"
-        *ngIf="campo('usuario').invalid  && campo('usuario').errors && campo('usuario').errors.required && campo3('usuario') ">
-        Este campo es requerido
+      <form [formGroup]="formularioLogin">
+        <ion-item  >
+          <ion-label position="floating" style="font-weight:bold">Nombre</ion-label>
+          <ion-input formControlName="nombre"></ion-input>
+          <ion-note
+      slot="error"
+        *ngIf="campo('nombre').invalid  && campo('nombre').errors && campo('nombre').errors.required && fueTocado('nombre') "
+       >
+       Este campo es obligatorio
       </ion-note>
-      <ion-note slot="error"
-        *ngIf="campo('usuario').invalid  && campo('usuario').errors && campo('usuario').errors.maxlength && campo2('usuario') ">
-        Los caracteres maximos son 8
+      <ion-note
+      slot="error"
+        *ngIf="campo('nombre').invalid  && campo('nombre').errors && campo('nombre').errors.maxlength && fueTocado('nombre') "
+      >
+        Los caracteres maximos son 20
       </ion-note>
-      <ion-note slot="error"
-        *ngIf="campo('usuario').invalid  && campo('usuario').errors && campo('usuario').errors.minlength && campo('usuario') ">
-        Los caracteres minimo son 3
+      <ion-note
+      slot="error"
+        *ngIf="campo('nombre').invalid  && campo('nombre').errors && campo('nombre').errors.minlength && fueTocado('nombre') "
+      >
+        Los caracteres minimos son 3
       </ion-note>
-      </ion-item>
-
-      <ion-item counter="true">
-        <ion-label position="floating">Contraseña</ion-label>
-        <ion-input type="password" formControlName="contraseña" placeholder="Ingresa Contraseña"></ion-input>
-        <ion-note slot="error"
-        *ngIf="campo('contraseña').invalid  && campo('contraseña').errors && campo('contraseña').errors.required && campo3('contraseña') ">
-        Este campo es requerido
+        </ion-item>
+<ion-item>
+          <ion-label position="floating" style="font-weight:bold">Contraseña</ion-label>
+          <ion-input formControlName="contraseña" type="password"></ion-input>
+          <ion-note
+      slot="error"
+        *ngIf="campo('contraseña').invalid  && campo('contraseña').errors && campo('contraseña').errors.required && fueTocado('contraseña') "
+       >
+       Este campo es obligatorio
       </ion-note>
-      <ion-note slot="error"
-        *ngIf="campo('contraseña').invalid  && campo('contraseña').errors && campo('contraseña').errors.maxlength && campo2('contraseña') ">
-        Los caracteres maximos son 4
+      <ion-note
+      slot="error"
+        *ngIf="campo('contraseña').invalid  && campo('contraseña').errors && campo('contraseña').errors.maxlength && fueTocado('contraseña') "
+      >
+        Los caracteres maximos son 20
       </ion-note>
-      <ion-note slot="error"
-        *ngIf="campo('contraseña').invalid  && campo('contraseña').errors && campo('contraseña').errors.minlength && campo('contraseña') ">
-        Los caracteres minimo son 4
+      <ion-note
+      slot="error"
+        *ngIf="campo('contraseña').invalid  && campo('contraseña').errors && campo('contraseña').errors.minlength && fueTocado('contraseña') "
+      >
+        Los caracteres minimos son 3
       </ion-note>
-
-
-
-
-      </ion-item>
-
-
-    </ion-list>
+        </ion-item>
+      </form>
+      <br>
+      <ion-button (click)="ingresar()" color="danger" >
+        Ingresar
+      </ion-button>
+      <ion-button [routerLink]="['/registro']"color="danger" style="margin-left: 10px">Registrarse</ion-button>
     </ion-card-content>
-    </ion-card>
-    <ion-button style ="margin-left: 64px;"shape="round" [routerLink]="['home']">Ingresar</ion-button>
-
-  </ion-col>
-  </ion-row>
-  <br>
-      <a style ="margin-left:85px;"> Crear Cuenta </a>
-
-</form>
+  </ion-card>
 </ion-content>

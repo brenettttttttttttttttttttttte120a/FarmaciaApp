@@ -9,6 +9,10 @@ import { CarritoPage } from '../carrito/carrito.page';
 })
 export class InicioPage implements OnInit {
 
+  constructor(
+  private modalCtrl: ModalController
+
+  ) { }
 
   async openCart(){
     let modal= await this.modalCtrl.create({
@@ -18,13 +22,13 @@ export class InicioPage implements OnInit {
     modal.present();
 
 }
-private modalCtrl: ModalController
-
-
-
-  constructor() { }
 
   ngOnInit() {
   }
 
+
+
+
 }
+
+

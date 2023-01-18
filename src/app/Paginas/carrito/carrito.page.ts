@@ -7,13 +7,18 @@ import { ModalController } from '@ionic/angular';
   styleUrls: ['./carrito.page.scss'],
 })
 export class CarritoPage implements OnInit {
-  modalCtrl: any;
+
+
+
+
+  constructor(
+    private modalCtrl: ModalController
+
+
+  ) { }
   close() {
     this.modalCtrl.dismiss();
   }
-
-
-  constructor() { }
 
   ngOnInit() {
   }

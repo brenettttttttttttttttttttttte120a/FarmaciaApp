@@ -1,6 +1,16 @@
 {
-  "nombre": "Seba",
-  "contraseña": "1234",
-  "tipo": "cliente",
-  "id": 1
+  "usuario": [
+    {
+      "nombre": "Seba",
+      "contraseña": "1234",
+      "tipo": "Quimico Farmaceutico",
+      "id": 1
+    },
+    {
+      "nombre": "Rusio",
+      "contraseña": "1234",
+      "tipo": "cliente",
+      "id": 2
+    }
+  ]
 }
