@@ -13,4 +13,49 @@
       "id": 2
     }
   ]
+,
+
+
+  "producto": [
+    {
+      "categoria": "Perfumes",
+      "marca": "Avon",
+      "nombre": "Perfume de chocolate",
+      "id": 1
+    },
+
+    {
+      "categoria": "Medicamentos",
+      "marca": "Doctor simi",
+      "nombre": "Ibuprofeno",
+      "id": 2
+    },
+
+    {
+      "categoria": "Shampoo",
+      "marca": "Pantene",
+      "nombre": "Shampoo pelo graso",
+      "id": 3
+    },
+
+
+    {
+      "categoria": "Medicamentos",
+      "marca": "Cruz verde",
+      "nombre": "Paracetamol",
+      "id": 4
+    },
+
+
+    {
+      "categoria": "Medicamentos",
+      "marca": "Cruz roja",
+      "nombre": "Paracetamol",
+      "id": 5
+    }
+
+
+
+
+  ]
 }

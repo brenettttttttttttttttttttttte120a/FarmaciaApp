@@ -7,14 +7,18 @@ import { IonicModule } from '@ionic/angular';
 import { ProductoPageRoutingModule } from './producto-routing.module';
 
 import { ProductoPage } from './producto.page';
+import { HttpClientModule } from '@angular/common/http';
+import { ApiProductoService } from '../servicios/api-producto.service';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    ProductoPageRoutingModule
+    ProductoPageRoutingModule,
+    HttpClientModule
   ],
-  declarations: [ProductoPage]
+  declarations: [ProductoPage],
+  providers: [ApiProductoService]
 })
 export class ProductoPageModule {}

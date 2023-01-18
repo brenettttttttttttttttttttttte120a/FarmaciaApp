@@ -1,9 +1,32 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>Producto</ion-title>
-  </ion-toolbar>
-</ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Productos</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
 
+    <ion-toolbar color="primary">
+      <ion-searchbar color="warning" placeholder = "Buscar nombre o marca o categoria" [debounce]="1000" animated (ionChange)="handleChange($event)"></ion-searchbar>
+    </ion-toolbar>
+  </ion-toolbar>
+
+</ion-header>
 <ion-content>
 
+
+  <ion-refresher slot="fixed" (ionRefresh)="handleRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  <ion-list>
+    <ion-card color="primary" *ngFor="let detalles of results">
+      <ion-card-header >
+        <ion-card-title >
+          <h1 id = "card">
+            {{detalles.nombre}} {{detalles.marca}}
+          </h1></ion-card-title>
+      </ion-card-header>
+      <img [src]="detalles.img" alt="">
+      <h3 id = "card">{{detalles.categoria}}</h3>
+    </ion-card>
+  </ion-list>
 </ion-content>
