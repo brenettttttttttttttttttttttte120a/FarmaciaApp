@@ -16,7 +16,7 @@ const routes: Routes = [
     loadChildren: () => import('./Paginas/inicio/inicio.module').then( m => m.InicioPageModule)
   },
   {
-    path: '',
+    path: 'producto',
     loadChildren: () => import('./Paginas/producto/producto.module').then( m => m.ProductoPageModule)
   },
 
@@ -43,6 +43,14 @@ const routes: Routes = [
   {
     path: 'carrito',
     loadChildren: () => import('./Paginas/carrito/carrito.module').then( m => m.CarritoPageModule)
+  },
+  {
+    path: '',
+    loadChildren: () => import('./Paginas/medicamentos/medicamentos.module').then( m => m.MedicamentosPageModule)
+  },
+  {
+    path: 'cremas',
+    loadChildren: () => import('./Paginas/cremas/cremas.module').then( m => m.CremasPageModule)
   },
 ];
 

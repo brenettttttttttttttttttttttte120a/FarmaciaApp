@@ -11,11 +11,20 @@
       "contraseña": "1234",
       "tipo": "cliente",
       "id": 2
+    },
+    {
+      "nombre": "Anuel AA",
+      "contraseña": "brrr",
+      "tipo": "cliente",
+      "id": 3
+    },
+    {
+      "nombre": "Faro",
+      "contraseña": "1234",
+      "tipo": "cliente",
+      "id": 4
     }
-  ]
-,
-
-
+  ],
   "producto": [
     {
       "categoria": "Perfumes",
@@ -23,39 +32,29 @@
       "nombre": "Perfume de chocolate",
       "id": 1
     },
-
     {
       "categoria": "Medicamentos",
       "marca": "Doctor simi",
       "nombre": "Ibuprofeno",
       "id": 2
     },
-
     {
       "categoria": "Shampoo",
       "marca": "Pantene",
       "nombre": "Shampoo pelo graso",
       "id": 3
     },
-
-
     {
       "categoria": "Medicamentos",
       "marca": "Cruz verde",
       "nombre": "Paracetamol",
       "id": 4
     },
-
-
     {
       "categoria": "Medicamentos",
       "marca": "Cruz roja",
       "nombre": "Paracetamol",
       "id": 5
     }
-
-
-
-
   ]
 }
