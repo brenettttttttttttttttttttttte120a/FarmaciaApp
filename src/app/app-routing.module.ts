@@ -16,7 +16,7 @@ const routes: Routes = [
     loadChildren: () => import('./Paginas/inicio/inicio.module').then( m => m.InicioPageModule)
   },
   {
-    path: 'producto',
+    path: '',
     loadChildren: () => import('./Paginas/producto/producto.module').then( m => m.ProductoPageModule)
   },
 
@@ -45,7 +45,7 @@ const routes: Routes = [
     loadChildren: () => import('./Paginas/carrito/carrito.module').then( m => m.CarritoPageModule)
   },
   {
-    path: '',
+    path: 'medicamentos',
     loadChildren: () => import('./Paginas/medicamentos/medicamentos.module').then( m => m.MedicamentosPageModule)
   },
   {

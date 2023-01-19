@@ -9,25 +9,38 @@ import { ApiProductoService } from '../servicios/api-producto.service';
 })
 export class CremasPage implements OnInit {
 
+
   @ViewChild(IonInfiniteScroll)
   public scroll: IonInfiniteScroll;
   public data: any = []
   public results = [...this.data];
 
+  public categoria= '';
+  cart: any = [];
+  public resultados = [...this.cart];
+
+
   constructor(
-    public servicio: ApiProductoService
+    public servicio: ApiProductoService,
+
+
   ) { }
 
   ngOnInit() {
-    this.servicio.obtenerPrimerosProductos();
-    this.servicio.listaProducto$.subscribe(resp => {
-      this.data = resp;
-      this.results = this.data;
-      console.log("estos datitos tengo:", this.data);
+
+    this.categoria= this.servicio.retornarcategoriacrema();
+    this.servicio.getProducto(this.categoria).subscribe(res => {
+      this.cart = res;
+      this.resultados = this.cart;
       if (this.scroll) {
         this.scroll.complete();
       }
-    })
+
+
+    });
+
+
+
   }
   handleRefresh(event) {
     setTimeout(() => {
@@ -36,14 +49,15 @@ export class CremasPage implements OnInit {
     }, 2000);
   };
 
-  handleChange(event) {
+   handleChange(event) {
     const query = event.target.value.toLowerCase();
-    this.results = this.data;
+    this.resultados = this.cart;
     if (query && query.trim() != ' ') {
-      this.results = this.results.filter((data: any) => {
-        return (data.nombre.toLowerCase().indexOf(query.toLowerCase()) > -1)||(data.categoria.toLowerCase().indexOf(query.toLowerCase()) > -1)||(data.marca.toLowerCase().indexOf(query.toLowerCase()) > -1);
+      this.resultados = this.resultados.filter((cart: any) => {
+        return (cart.nombre.toLowerCase().indexOf(query.toLowerCase()) > -1)||(cart.categoria.toLowerCase().indexOf(query.toLowerCase()) > -1)||(cart.marca.toLowerCase().indexOf(query.toLowerCase()) > -1);
       });
     }
   }
+
 
 }

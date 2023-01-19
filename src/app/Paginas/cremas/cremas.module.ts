@@ -8,7 +8,7 @@ import { CremasPageRoutingModule } from './cremas-routing.module';
 
 import { CremasPage } from './cremas.page';
 import { HttpClientModule } from '@angular/common/http';
-import { ApiUsuarioService } from '../servicios/api-usuario.service';
+import { ApiProductoService } from '../servicios/api-producto.service';
 
 @NgModule({
   imports: [
@@ -19,6 +19,6 @@ import { ApiUsuarioService } from '../servicios/api-usuario.service';
     HttpClientModule
   ],
   declarations: [CremasPage],
-  providers: [ApiUsuarioService]
+  providers: [ApiProductoService]
 })
 export class CremasPageModule {}

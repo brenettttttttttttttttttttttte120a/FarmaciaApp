@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
+
 import { IonInfiniteScroll } from '@ionic/angular';
 import { ApiProductoService } from '../servicios/api-producto.service';
 
@@ -15,8 +16,15 @@ export class MedicamentosPage implements OnInit {
   public data: any = []
   public results = [...this.data];
 
+  public categoria= '';
+  cart: any = [];
+  public resultados = [...this.cart];
+
+
   constructor(
-    public servicio: ApiProductoService
+    public servicio: ApiProductoService,
+
+
   ) { }
 
   ngOnInit() {
@@ -28,7 +36,22 @@ export class MedicamentosPage implements OnInit {
       if (this.scroll) {
         this.scroll.complete();
       }
-    })
+
+
+    });
+    this.categoria= this.servicio.retornarcategoria();
+    this.servicio.getProducto(this.categoria).subscribe(res => {
+      this.cart = res;
+      this.resultados = this.cart;
+      if (this.scroll) {
+        this.scroll.complete();
+      }
+
+
+    });
+
+
+
   }
   handleRefresh(event) {
     setTimeout(() => {
@@ -37,12 +60,12 @@ export class MedicamentosPage implements OnInit {
     }, 2000);
   };
 
-  handleChange(event) {
+   handleChange(event) {
     const query = event.target.value.toLowerCase();
-    this.results = this.data;
+    this.resultados = this.cart;
     if (query && query.trim() != ' ') {
-      this.results = this.results.filter((data: any) => {
-        return (data.nombre.toLowerCase().indexOf(query.toLowerCase()) > -1)||(data.categoria.toLowerCase().indexOf(query.toLowerCase()) > -1)||(data.marca.toLowerCase().indexOf(query.toLowerCase()) > -1);
+      this.resultados = this.resultados.filter((cart: any) => {
+        return (cart.nombre.toLowerCase().indexOf(query.toLowerCase()) > -1)||(cart.categoria.toLowerCase().indexOf(query.toLowerCase()) > -1)||(cart.marca.toLowerCase().indexOf(query.toLowerCase()) > -1);
       });
     }
   }

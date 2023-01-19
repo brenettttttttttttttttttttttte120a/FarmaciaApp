@@ -18,15 +18,25 @@
     <ion-refresher-content></ion-refresher-content>
   </ion-refresher>
   <ion-list>
-    <ion-card color="primary" *ngFor="let detalles of results">
+    <ion-card color="primary" (click)="openMedicamento()" >
       <ion-card-header >
         <ion-card-title >
           <h1 id = "card">
-            {{detalles.nombre}} {{detalles.marca}}
+           medicamentos
           </h1></ion-card-title>
       </ion-card-header>
-      <img [src]="detalles.img" alt="">
-      <h3 id = "card">{{detalles.categoria}}</h3>
     </ion-card>
+    <br>
+    <ion-card color="primary" (click)="openCremas()" >
+      <ion-card-header >
+        <ion-card-title >
+          <h1 id = "card">
+           cremas
+          </h1></ion-card-title>
+      </ion-card-header>
+
+
+    </ion-card>
+
   </ion-list>
 </ion-content>

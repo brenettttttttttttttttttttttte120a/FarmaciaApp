@@ -27,34 +27,41 @@
   ],
   "producto": [
     {
-      "categoria": "Perfumes",
+      "categoria": "cremas",
       "marca": "Avon",
-      "nombre": "Perfume de chocolate",
+      "nombre": "Crema de chocolate",
       "id": 1
     },
     {
-      "categoria": "Medicamentos",
+      "categoria": "medicamento",
       "marca": "Doctor simi",
       "nombre": "Ibuprofeno",
       "id": 2
     },
     {
-      "categoria": "Shampoo",
-      "marca": "Pantene",
-      "nombre": "Shampoo pelo graso",
+      "categoria": "cremas",
+      "marca": "Nivea",
+      "nombre": "Crema facial",
       "id": 3
     },
     {
-      "categoria": "Medicamentos",
+      "categoria": "medicamento",
       "marca": "Cruz verde",
       "nombre": "Paracetamol",
       "id": 4
     },
     {
-      "categoria": "Medicamentos",
+      "categoria": "medicamento",
       "marca": "Cruz roja",
       "nombre": "Paracetamol",
       "id": 5
+
+    },
+    {
+      "categoria": "cremas",
+      "marca": "Cicatricure",
+      "nombre": "Cicatricure age care reafirmante",
+      "id": 6
     }
   ]
 }

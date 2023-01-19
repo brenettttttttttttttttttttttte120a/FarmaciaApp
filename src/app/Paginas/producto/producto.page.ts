@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
 import { IonInfiniteScroll } from '@ionic/angular';
 import { ApiProductoService } from '../servicios/api-producto.service';
 
@@ -15,7 +16,8 @@ export class ProductoPage implements OnInit {
   public results = [...this.data];
 
   constructor(
-    public servicio: ApiProductoService
+    public servicio: ApiProductoService,
+    private router: Router
   ) { }
 
   ngOnInit() {
@@ -45,7 +47,16 @@ export class ProductoPage implements OnInit {
       });
     }
   }
+  public openMedicamento(){
+    var categoria ="medicamento";
+    this.servicio.categoria(categoria);
+    this.router.navigate(['/medicamentos']);
 
+  }
+  public openCremas(){
+    var categoria ="cremas";
+    this.servicio.categoriacrema(categoria);
+    this.router.navigate(['/cremas']);
 
-
+  }
 }

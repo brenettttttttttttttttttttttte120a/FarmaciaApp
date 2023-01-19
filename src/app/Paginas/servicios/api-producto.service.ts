@@ -1,7 +1,7 @@
 
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { ProductoId } from '../modelos/productos';
 
 @Injectable({
@@ -24,5 +24,26 @@ export class ApiProductoService {
       this.comListaProd.next(resp);
     })
   }
+  public getProducto(categoriaProducto: string) {
+    return this.http.get<any>(`${this.url_producto}?categoria=${categoriaProducto}`)
+  }
+
+  public categoria(categoria){
+    localStorage.setItem('nombrecategoria',categoria);
+
+  }
+  public retornarcategoria(){
+    return localStorage.getItem('nombrecategoria');
+  }
+
+  public categoriacrema(categoriacrema){
+    localStorage.setItem('crema cat',categoriacrema);
+
+  }
+  public retornarcategoriacrema(){
+    return localStorage.getItem('crema cat');
+  }
+
+
 }
 
