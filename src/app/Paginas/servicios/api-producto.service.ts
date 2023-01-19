@@ -44,6 +44,12 @@ export class ApiProductoService {
     return localStorage.getItem('crema cat');
   }
 
+  public categoriaperfume(categoriaperfume){
+    localStorage.setItem('perfume categoria',categoriaperfume);
 
+  }
+  public retornarcategoriaperfume(){
+    return localStorage.getItem('perfume categoria');
+  }
 }
 

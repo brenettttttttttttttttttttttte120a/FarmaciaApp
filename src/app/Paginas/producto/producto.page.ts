@@ -59,4 +59,10 @@ export class ProductoPage implements OnInit {
     this.router.navigate(['/cremas']);
 
   }
+
+  public openPerfumes(){
+    var categoria ="perfumes";
+    this.servicio.categoriaperfume(categoria);
+    this.router.navigate(['/perfumes']);
+}
 }

@@ -62,6 +62,34 @@
       "marca": "Cicatricure",
       "nombre": "Cicatricure age care reafirmante",
       "id": 6
+    },
+
+    {
+      "categoria": "perfumes",
+      "marca": "Antonio Banderas",
+      "nombre": "Antonio Banderas Blue Edition",
+      "id": 7
+    },
+
+    {
+      "categoria": "perfumes",
+      "marca": "CR7",
+      "nombre": "Cristiano Ronaldo Red",
+      "id": 8
+    },
+
+    {
+      "categoria": "perfumes",
+      "marca": "Calvin Klein",
+      "nombre": "Calvin Klein Black",
+      "id": 9
+    },
+
+    {
+      "categoria": "perfumes",
+      "marca": "Zara",
+      "nombre": "Rose Gourmand",
+      "id": 10
     }
   ]
 }
