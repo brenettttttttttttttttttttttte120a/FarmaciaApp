@@ -1,9 +1,7 @@
 <ion-header>
   <ion-toolbar color="primary">
     <ion-title>Productos</ion-title>
-    <ion-buttons slot="start">
-      <ion-back-button></ion-back-button>
-    </ion-buttons>
+
 
     <ion-toolbar color="primary">
       <ion-searchbar color="warning" placeholder = "Buscar nombre o marca o categoria" [debounce]="1000" animated (ionChange)="handleChange($event)"></ion-searchbar>
@@ -51,3 +49,27 @@
 
   </ion-list>
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-tabs>
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button [routerLink]="['/producto']" tab="Productos">
+          <ion-icon name="bag-handle-outline"></ion-icon>
+          <ion-label>Productos</ion-label>
+
+        </ion-tab-button>
+
+        <ion-tab-button [routerLink]="['/login']"  tab="Usuario">
+          <ion-icon name="person-circle" aria-hidden="true"></ion-icon>
+          <ion-label>Usuario</ion-label>
+        </ion-tab-button>
+
+        <ion-tab-button (click)="openCart()" tab="Carrito">
+          <ion-icon name="cart" class="cart-icon"></ion-icon>
+          <ion-label>Carrito</ion-label>
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+  </ion-toolbar>
+</ion-footer>

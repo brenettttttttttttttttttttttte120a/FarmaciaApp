@@ -3,26 +3,14 @@
     {
       "nombre": "Seba",
       "contraseña": "1234",
-      "tipo": "Quimico Farmaceutico",
+      "tipo": "admin",
       "id": 1
     },
     {
-      "nombre": "Rusio",
+      "nombre": "Andres",
       "contraseña": "1234",
       "tipo": "cliente",
       "id": 2
-    },
-    {
-      "nombre": "Anuel AA",
-      "contraseña": "brrr",
-      "tipo": "cliente",
-      "id": 3
-    },
-    {
-      "nombre": "Faro",
-      "contraseña": "1234",
-      "tipo": "cliente",
-      "id": 4
     }
   ],
   "producto": [
@@ -55,7 +43,6 @@
       "marca": "Cruz roja",
       "nombre": "Paracetamol",
       "id": 5
-
     },
     {
       "categoria": "cremas",
@@ -63,28 +50,24 @@
       "nombre": "Cicatricure age care reafirmante",
       "id": 6
     },
-
     {
       "categoria": "perfumes",
       "marca": "Antonio Banderas",
       "nombre": "Antonio Banderas Blue Edition",
       "id": 7
     },
-
     {
       "categoria": "perfumes",
       "marca": "CR7",
       "nombre": "Cristiano Ronaldo Red",
       "id": 8
     },
-
     {
       "categoria": "perfumes",
       "marca": "Calvin Klein",
       "nombre": "Calvin Klein Black",
       "id": 9
     },
-
     {
       "categoria": "perfumes",
       "marca": "Zara",

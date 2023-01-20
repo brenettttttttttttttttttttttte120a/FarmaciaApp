@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
-import { IonInfiniteScroll } from '@ionic/angular';
+import { IonInfiniteScroll, ModalController } from '@ionic/angular';
+import { CarritoPage } from '../carrito/carrito.page';
 import { ApiProductoService } from '../servicios/api-producto.service';
 
 @Component({
@@ -17,7 +18,8 @@ export class ProductoPage implements OnInit {
 
   constructor(
     public servicio: ApiProductoService,
-    private router: Router
+    private router: Router,
+    private modalCtrl: ModalController
   ) { }
 
   ngOnInit() {
@@ -65,4 +67,16 @@ export class ProductoPage implements OnInit {
     this.servicio.categoriaperfume(categoria);
     this.router.navigate(['/perfumes']);
 }
+
+async openCart(){
+  let modal= await this.modalCtrl.create({
+    component: CarritoPage,
+    cssClass: 'carrito'
+  });
+  modal.present();
+
+}
+
+
+
 }

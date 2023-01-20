@@ -51,5 +51,8 @@ export class ApiProductoService {
   public retornarcategoriaperfume(){
     return localStorage.getItem('perfume categoria');
   }
+
+
+
 }
 

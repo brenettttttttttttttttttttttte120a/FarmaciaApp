@@ -4,7 +4,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
 
   {
-    path: '',
+    path: 'login',
     loadChildren: () => import('./Paginas/login/login.module').then( m => m.LoginPageModule)
   },
   {
@@ -12,7 +12,7 @@ const routes: Routes = [
     loadChildren: () => import('./Paginas/registro/registro.module').then( m => m.RegistroPageModule)
   },
   {
-    path: 'inicio',
+    path: '',
     loadChildren: () => import('./Paginas/inicio/inicio.module').then( m => m.InicioPageModule)
   },
   {
@@ -55,6 +55,18 @@ const routes: Routes = [
   {
     path: 'perfumes',
     loadChildren: () => import('./Paginas/perfumes/perfumes.module').then( m => m.PerfumesPageModule)
+  },
+  {
+    path: 'roles',
+    loadChildren: () => import('./Paginas/roles/roles.module').then( m => m.RolesPageModule)
+  },
+  {
+    path: 'modificarUsuario/:idUsuario',
+    loadChildren: () => import('./Paginas/modificar-usuario/modificar-usuario.module').then( m => m.ModificarUsuarioPageModule)
+  },
+  {
+    path: 'eliminarUsuario/:idUsuario',
+    loadChildren: () => import('./Paginas/eliminar-usuario/eliminar-usuario.module').then( m => m.EliminarUsuarioPageModule)
   },
 ];
 

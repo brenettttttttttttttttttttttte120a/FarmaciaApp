@@ -2,20 +2,19 @@
   <ion-toolbar>
     <ion-title>Menu Principal</ion-title>
   </ion-toolbar>
+
+
 </ion-header>
 
 <ion-content>
 
-  <ion-fab vertical="top" horizontal="end" slot="fixed">
-    <ion-fab-button (click)="openCart()" #cart>
-      <ion-icon name="cart" class="cart-icon"></ion-icon>
-    </ion-fab-button>
-  </ion-fab>
 
 
 
 
-<ion-searchbar></ion-searchbar>
+
+
+
   <ion-slides>
     <ion-slide>
       <div class="slide">
@@ -27,11 +26,18 @@
       </div>
     </ion-slide>
 
+
+
+
+
+
+
+
     <ion-slide>
       <img src="https://d1tjllbjmslitt.cloudfront.net/spree/products/83862/large_webp/2202026.webp?1668457177" />
       <h2>Ketoprofeno</h2>
       <p>
-      Ketoprofeno 50mg x 20 Cápsulas <br> Principio Activo: Ketoprofeno Forma Farmacéutica: Cápsulas
+        Ketoprofeno 50mg x 20 Cápsulas <br> Principio Activo: Ketoprofeno Forma Farmacéutica: Cápsulas
       </p>
     </ion-slide>
 
@@ -44,7 +50,8 @@
     </ion-slide>
 
     <ion-slide>
-      <img src="https://d1tjllbjmslitt.cloudfront.net/spree/products/83918/large_webp/ECommerce-Doraliv.webp?1668538829" />
+      <img
+        src="https://d1tjllbjmslitt.cloudfront.net/spree/products/83918/large_webp/ECommerce-Doraliv.webp?1668538829" />
       <h2>NOTTS</h2>
       <p>
         Doraliv Ibuprofeno 600 mg x 10 Cápsulas <br>Principio Activo: Ibuprofeno Forma Farmacéutica: Oral
@@ -54,11 +61,28 @@
 
 
 
-
-
-
-
-
-
-
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-tabs>
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button [routerLink]="['/producto']" tab="Productos">
+          <ion-icon name="bag-handle-outline"></ion-icon>
+          <ion-label>Productos</ion-label>
+
+        </ion-tab-button>
+
+        <ion-tab-button [routerLink]="['/login']"  tab="Usuario">
+          <ion-icon name="person-circle" aria-hidden="true"></ion-icon>
+          <ion-label>Usuario</ion-label>
+        </ion-tab-button>
+
+        <ion-tab-button (click)="openCart()" tab="Carrito">
+          <ion-icon name="cart" class="cart-icon"></ion-icon>
+          <ion-label>Carrito</ion-label>
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+  </ion-toolbar>
+</ion-footer>

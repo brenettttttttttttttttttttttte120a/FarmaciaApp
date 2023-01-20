@@ -55,10 +55,16 @@ export class LoginPage implements OnInit {
           alert("Quimico Farmaceutico logueado");
         this.apiUsuario.idUsuario(user.id);
         this.router.navigate(['/carrito']);
-        } else {
+        } else if (user.tipo==="cliente") {
           this.apiUsuario.idUsuario(user.id);
           alert("Cliente logueado");
           this.router.navigate(['/inicio']);
+
+        } else {
+          this.apiUsuario.idUsuario(user.id);
+          alert("admin logueado");
+          this.router.navigate(['/roles']);
+
         }
       } else{
         alert("Datos Incorrectos");

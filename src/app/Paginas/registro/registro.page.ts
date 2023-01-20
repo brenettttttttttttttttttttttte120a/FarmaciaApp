@@ -22,6 +22,8 @@ export class RegistroPage implements OnInit {
 
       contraseña: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(10)]],
       tipo: ['cliente',]
+
+
     })
   }
   ngOnInit() {

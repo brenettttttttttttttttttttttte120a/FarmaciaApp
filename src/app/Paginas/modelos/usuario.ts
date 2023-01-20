@@ -7,3 +7,7 @@ export interface Usuario {
 export interface UsuarioConIdo extends Usuario {
   id: number;
 }
+
+export interface UsuarioParcial extends Partial<Usuario>{
+
+}
