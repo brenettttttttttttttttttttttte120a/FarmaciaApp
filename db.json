@@ -9,8 +9,26 @@
     {
       "nombre": "Andres",
       "contraseña": "1234",
-      "tipo": "cliente",
+      "tipo": "Quimico Farmaceutico",
       "id": 2
+    },
+    {
+      "nombre": "Adrian",
+      "contraseña": "1234",
+      "tipo": "cliente",
+      "id": 3
+    },
+    {
+      "nombre": "Gabriel",
+      "contraseña": "1234",
+      "tipo": "cliente",
+      "id": 4
+    },
+    {
+      "nombre": "Romero",
+      "contraseña": "1234",
+      "tipo": "cliente",
+      "id": 5
     }
   ],
   "producto": [
